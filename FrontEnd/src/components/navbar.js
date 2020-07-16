@@ -1,12 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  NavDropdown,
-  Navbar,
-  FormControl,
-  Form,
-} from "react-bootstrap";
-import logo from "../assets/logo.png";
+import { Dropdown, Navbar, FormControl, Form } from "react-bootstrap";
+import logo from "../assets/Picture1.png";
 
 function navbar() {
   return (
@@ -42,17 +37,21 @@ function navbar() {
             />
           </Form>
         </Navbar.Collapse>
-        <Navbar.Collapse className="justify-content-end">
-          <NavDropdown title="Dropdown">
-            <NavDropdown.Item href="#action/3.1">View Profile</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Edit Profile
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Log Out</NavDropdown.Item>
-            <NavDropdown.Divider />
-          </NavDropdown>
-          <Navbar.Text></Navbar.Text>
-        </Navbar.Collapse>
+
+        <Dropdown style={dropdown}>
+          <Dropdown.Toggle
+            variant="success"
+            id="dropdown-basic"
+            style={dropdownone}
+          >
+            Hi, Karlah
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="#viewprofile">View Profile</Dropdown.Item>
+            <Dropdown.Item href="#editprofile">Edit Profile</Dropdown.Item>
+            <Dropdown.Item href="#">Log Out</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Navbar>
     </>
   );
@@ -88,4 +87,15 @@ const techlogo = {
 
 const search = {
   width: 500,
+};
+
+const dropdown = {
+  backgroundColor: "#00A037",
+  borderColor: "#00A037",
+};
+
+const dropdownone = {
+  backgroundColor: "#00A037",
+  borderColor: "#00A037",
+  FontWeight: "bold",
 };
