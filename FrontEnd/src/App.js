@@ -6,7 +6,7 @@ import Login from "./components/login";
 import Latest from "./components/latest";
 import Browse from "./components/browse";
 import Contact from "./components/contact";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom"; //to be able to switch to different pages
 
 function App() {
   return (

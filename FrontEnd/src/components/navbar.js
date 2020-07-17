@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, Navbar, FormControl, Form } from "react-bootstrap";
+//to be able to connect the navbar to pages
 import { Link } from "react-router-dom";
 import logo from "../assets/Picture1.png";
 
