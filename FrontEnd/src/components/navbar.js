@@ -6,6 +6,7 @@ import logo from "../assets/Picture1.png";
 function navbar() {
   return (
     <>
+    <Navbar fixed="top" />
       <Navbar style={navbarstyle}>
         <Navbar sticky="top" />
         <img alt="" src={logo} style={techlogo} />
@@ -13,17 +14,17 @@ function navbar() {
         <ul class="nav nav-pills nav-fill">
           <li className="nav-item">
             <a className="nav-link active" href="#latest" style={selected}>
-              Latest
+              LATEST
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#browse" style={notselected}>
-              Browse
+              BROWSE
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#contact" style={notselected}>
-              Contact
+            <a className="nav-link" href="./contact.js" style={notselected}>
+              CONTACT
             </a>
           </li>
         </ul>
@@ -44,12 +45,12 @@ function navbar() {
             id="dropdown-basic"
             style={dropdownone}
           >
-            Hi, Karlah
+            Hi, Toma Red
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item href="#viewprofile">View Profile</Dropdown.Item>
             <Dropdown.Item href="#editprofile">Edit Profile</Dropdown.Item>
-            <Dropdown.Item href="#">Log Out</Dropdown.Item>
+            <Dropdown.Item href="#logout">Log Out</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Navbar>
