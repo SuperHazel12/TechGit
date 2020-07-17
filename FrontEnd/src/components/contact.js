@@ -57,9 +57,7 @@ function contact() {
 }
 
 export default contact;
-{
-  /*for the styles*/
-}
+
 const message = {
   width: "100%",
   height: "100%",

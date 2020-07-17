@@ -6,7 +6,7 @@ import logo from "../assets/Picture1.png";
 function navbar() {
   return (
     <>
-    <Navbar fixed="top" />
+      <Navbar fixed="top" />
       <Navbar style={navbarstyle}>
         <Navbar sticky="top" />
         <img alt="" src={logo} style={techlogo} />
@@ -38,21 +38,22 @@ function navbar() {
             />
           </Form>
         </Navbar.Collapse>
-
-        <Dropdown style={dropdown}>
-          <Dropdown.Toggle
-            variant="success"
-            id="dropdown-basic"
-            style={dropdownone}
-          >
-            Hi, Toma Red
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#viewprofile">View Profile</Dropdown.Item>
-            <Dropdown.Item href="#editprofile">Edit Profile</Dropdown.Item>
-            <Dropdown.Item href="#logout">Log Out</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+        <Navbar.Collapse className="justify-content-end">
+          <Dropdown style={dropdown}>
+            <Dropdown.Toggle
+              variant="success"
+              id="dropdown-basic"
+              style={dropdownone}
+            >
+              Hi, Toma Red
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#viewprofile">View Profile</Dropdown.Item>
+              <Dropdown.Item href="#editprofile">Edit Profile</Dropdown.Item>
+              <Dropdown.Item href="#logout">Log Out</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Navbar.Collapse>
       </Navbar>
     </>
   );
@@ -83,7 +84,7 @@ const techlogo = {
   borderRadius: 300,
   width: "4%",
   height: "4%",
-  marginRight: 20,
+  marginRight: "2%",
 };
 
 const search = {

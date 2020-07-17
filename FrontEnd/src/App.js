@@ -8,7 +8,7 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <Login />
+      <Contact />
       <Footer />
     </React.Fragment>
   );
