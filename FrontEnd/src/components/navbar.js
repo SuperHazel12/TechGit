@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, Navbar, FormControl, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../assets/Picture1.png";
 
 function navbar() {
@@ -13,19 +14,19 @@ function navbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ul class="nav nav-pills nav-fill">
           <li className="nav-item">
-            <a className="nav-link active" href="#latest" style={selected}>
+            <Link className="nav-link active" to="/" style={selected}>
               LATEST
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#browse" style={notselected}>
+            <Link className="nav-link" to="/browse" style={notselected}>
               BROWSE
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="./contact.js" style={notselected}>
+            <Link className="nav-link" to="/contact" style={notselected}>
               CONTACT
-            </a>
+            </Link>
           </li>
         </ul>
         <Navbar.Collapse className="justify-content-center">
@@ -48,9 +49,9 @@ function navbar() {
               Hi, Toma Red
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="#viewprofile">View Profile</Dropdown.Item>
-              <Dropdown.Item href="#editprofile">Edit Profile</Dropdown.Item>
-              <Dropdown.Item href="#logout">Log Out</Dropdown.Item>
+              <Dropdown.Item to="#viewprofile">View Profile</Dropdown.Item>
+              <Dropdown.Item to="#editprofile">Edit Profile</Dropdown.Item>
+              <Dropdown.Item to="#logout">Log Out</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Collapse>
