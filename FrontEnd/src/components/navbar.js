@@ -15,7 +15,7 @@ function navbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ul class="nav nav-pills nav-fill">
           <li className="nav-item">
-            <Link className="nav-link active" to="/" style={selected}>
+            <Link className="nav-link active" to="/latest" style={selected}>
               LATEST
             </Link>
           </li>

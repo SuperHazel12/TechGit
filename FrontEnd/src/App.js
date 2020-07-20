@@ -13,7 +13,8 @@ function App() {
     <React.Fragment>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Latest} />
+        <Route exact path="/" component={Login} />
+        <Route path="/latest" component={Latest} />
         <Route path="/browse" component={Browse} />
         <Route path="/contact" component={Contact} />
       </Switch>
