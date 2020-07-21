@@ -23,7 +23,7 @@ function contact() {
           <Col xs={8} md={6}>
             <Form style={form}>
               <h2 style={title}>SEND US A MESSAGE</h2>
-              <p>We love to help you, techoppers!</p>
+              <p>We love to help you, techopper!</p>
               <Row>
                 <Col>
                   {/*able to input name and message in the form*/}
@@ -57,9 +57,7 @@ function contact() {
 }
 
 export default contact;
-{
-  /*for the styles*/
-}
+
 const message = {
   width: "100%",
   height: "100%",

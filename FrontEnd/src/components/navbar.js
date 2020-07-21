@@ -1,30 +1,33 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, Navbar, FormControl, Form } from "react-bootstrap";
+//to be able to connect the navbar to pages
+import { Link } from "react-router-dom";
 import logo from "../assets/Picture1.png";
 
 function navbar() {
   return (
     <>
+      <Navbar fixed="top" />
       <Navbar style={navbarstyle}>
         <Navbar sticky="top" />
         <img alt="" src={logo} style={techlogo} />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ul class="nav nav-pills nav-fill">
           <li className="nav-item">
-            <a className="nav-link active" href="#latest" style={selected}>
-              Latest
-            </a>
+            <Link className="nav-link active" to="/latest" style={selected}>
+              LATEST
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#browse" style={notselected}>
-              Browse
-            </a>
+            <Link className="nav-link" to="/browse" style={notselected}>
+              BROWSE
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#contact" style={notselected}>
-              Contact
-            </a>
+            <Link className="nav-link" to="/contact" style={notselected}>
+              CONTACT
+            </Link>
           </li>
         </ul>
         <Navbar.Collapse className="justify-content-center">
@@ -37,21 +40,22 @@ function navbar() {
             />
           </Form>
         </Navbar.Collapse>
-
-        <Dropdown style={dropdown}>
-          <Dropdown.Toggle
-            variant="success"
-            id="dropdown-basic"
-            style={dropdownone}
-          >
-            Hi, Karlah
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#viewprofile">View Profile</Dropdown.Item>
-            <Dropdown.Item href="#editprofile">Edit Profile</Dropdown.Item>
-            <Dropdown.Item href="#">Log Out</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+        <Navbar.Collapse className="justify-content-end">
+          <Dropdown style={dropdown}>
+            <Dropdown.Toggle
+              variant="success"
+              id="dropdown-basic"
+              style={dropdownone}
+            >
+              Hi, Toma Red
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item to="#viewprofile">View Profile</Dropdown.Item>
+              <Dropdown.Item to="#editprofile">Edit Profile</Dropdown.Item>
+              <Dropdown.Item to="#logout">Log Out</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Navbar.Collapse>
       </Navbar>
     </>
   );
@@ -82,7 +86,7 @@ const techlogo = {
   borderRadius: 300,
   width: "4%",
   height: "4%",
-  marginRight: 20,
+  marginRight: "2%",
 };
 
 const search = {
