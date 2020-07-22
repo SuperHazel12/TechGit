@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "d77c2f4d-26e9-4455-ba6c-01b4ed5648ad",
+		"name": "TechOpps Forum API Test",
+		"description": "API route test collection for the use of QA, Devs, or anyone who stumbled upon this to test the backend.\n\n#Bester Team",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				},
+				"description": "Retrieves the list of posts from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/post/<id>",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/post/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"2"
+					]
+				},
+				"description": "Retrieves a post's contents through it's id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/post/<id>",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"I love TechOpps\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/post/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"2"
+					]
+				},
+				"description": "Updates the body of a post"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/post/<id> ",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/post/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"2"
+					]
+				},
+				"description": "Deletes a post [FOR TESTING PURPOSES ONLY]"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/post/submit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Second Post\",\r\n    \"body\": \"test\",\r\n    \"availability\": \"Online\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/post/submit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"submit"
+					]
+				},
+				"description": "Submits a new post through the API"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
