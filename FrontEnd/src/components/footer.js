@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import Picture1 from "../assets/Picture1.png";
+import Logo from "../assets/logo.png";
 import Facebook from "../assets/facebook.png";
 import Instagram from "../assets/instagram.png";
 import LinkedIn from "../assets/linkedin.png";
@@ -11,7 +11,7 @@ function footer() {
       <Container>
         <Row className="justify-content-md-center">
           <Col sm>
-            <img src={Picture1} alt="TechOppsLogo" style={logo} />
+            <img src={Logo} alt="TechOppsLogo" style={logo} />
           </Col>
           <Col style={column2}>
             <ul className="list-unstyled">
@@ -47,8 +47,6 @@ function footer() {
 }
 
 export default footer;
-
-const container = {};
 
 const footercontainer = {
   borderTop: "1px solid #00A037",
