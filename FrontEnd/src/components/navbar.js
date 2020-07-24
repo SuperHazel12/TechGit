@@ -50,9 +50,15 @@ function navbar() {
               Hi, Toma Red
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item to="#viewprofile">View Profile</Dropdown.Item>
-              <Dropdown.Item to="#editprofile">Edit Profile</Dropdown.Item>
-              <Dropdown.Item to="#logout">Log Out</Dropdown.Item>
+              <Dropdown.Item>
+                <Link to="/viewprofile">View Profile</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link to="/editprofile">Edit Profile</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link to="/logout">Log Out</Link>
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Collapse>
