@@ -1,23 +1,23 @@
-export const MenuItems = [
+export const menuitems = [
   {
     title: 'Latest',
-    url: '#latest',
+    url: '/latest',
     cName: 'nav-links',
   },
   {
     title: 'Browse',
-    url: '#browse',
+    url: '/browse',
     cName: 'nav-links',
   },
   {
     title: 'Contact',
-    url: '#contact',
+    url: '/contact',
     cName: 'nav-links',
   },
 
   {
     title: 'Profile',
-    url: '#profile',
+    url: '/viewprofile',
     cName: 'nav-links-mobile',
   }
 ]

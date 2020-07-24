@@ -9,11 +9,12 @@ import Contact from "./components/contact";
 import ViewProfile from "./components/viewprofile";
 import EditProfile from "./components/editprofile";
 import Logout from "./components/login";
-import { Switch, Route } from "react-router-dom"; //to be able to switch to different pages
+import { BrowserRouter, Switch, Route } from 'react-router-dom'; //to be able to switch to different pages
 
 function App() {
   return (
     <React.Fragment>
+      <BrowserRouter>
       <Navbar />
       <Switch>
         <Route exact path="/" component={Login} />
@@ -24,7 +25,9 @@ function App() {
         <Route path="/editprofile" component={EditProfile} />
         <Route path="/logout" component={Logout} />
       </Switch>
+      </BrowserRouter>
       <Footer />
+      
     </React.Fragment>
   );
 }

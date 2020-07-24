@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Navbar/Button.css'
+import '../Navbar/Button.css';
 
 const STYLES = [
   'btn--primary',
