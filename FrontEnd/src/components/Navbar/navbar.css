@@ -1,5 +1,5 @@
 .NavbarItems {
-  background: #00A037;
+  background: #00a037;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width:  80vw;
+  width: 80vw;
   justify-content: start;
   margin-left: 12px;
   margin-top: 12px;
@@ -48,7 +48,6 @@
 
 .fa-bars {
   color: white;
-
 }
 
 .nav-links-mobile {
@@ -58,10 +57,6 @@
 .menu-icon {
   display: none;
   margin-top: -10px;
-}
-
-Button {
-  display: none;
 }
 
 @media screen and (max-width: 960px) {
@@ -81,7 +76,7 @@ Button {
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background: #00A037;
+    background: #00a037;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -104,7 +99,7 @@ Button {
     transform: translate(25%, 50%);
     margin-left: -10px;
   }
-  .menu-icon{
+  .menu-icon {
     display: block;
     position: absolute;
     top: 0;
@@ -116,13 +111,12 @@ Button {
   .fa-times {
     color: white;
     font-size: 2rem;
-
   }
 
   .nav-links-mobile {
     display: block;
     text-align: center;
-    padding:  1.5rem;
+    padding: 1.5rem;
     margin: 2rem auto;
     border-radius: 4px;
     color: white;
@@ -130,7 +124,7 @@ Button {
   }
 
   .nav-links-mobile:hover {
-    background-color:white;
+    background-color: white;
     color: black;
     transition: 250ms;
     text-decoration: none;
@@ -139,5 +133,4 @@ Button {
   Button {
     display: none;
   }
-
 }

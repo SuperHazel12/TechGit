@@ -11,7 +11,7 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import pic from "../assets/logo.png";
-import mail from "../assets/mail.png";
+import Birthday from "./birthday";
 
 function editprofile() {
   return (
@@ -37,13 +37,8 @@ function editprofile() {
             </Col>
             <Col>
               <FormLabel style={style}>BIRTHDAY</FormLabel>
-              <InputGroup>
-                <FormControl
-                  type="birthday"
-                  style={width}
-                  placeholder="mm/dd/yyyy"
-                ></FormControl>
-              </InputGroup>
+              <br />
+              <Birthday style={width} />
             </Col>
           </Row>
 
@@ -113,7 +108,8 @@ function editprofile() {
               </InputGroup>
             </Col>
           </Row>
-
+          <br />
+          <br />
           <Button variant="success" style={bspaces}>
             SAVE CHANGES
           </Button>

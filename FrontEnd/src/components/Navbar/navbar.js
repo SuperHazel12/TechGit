@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { menuitems } from './menuitems';
-import { Button } from './Button';
+import React, { Component } from "react";
+import { menuitems } from "./menuitems";
+import { Button } from "./button";
 import "./navbar.css";
 
 class navbar extends Component {
-  state = { clicked: false }
+  state = { clicked: false };
 
   handleClick = () => {
-    this.setState({ clicked: !this.state.clicked })
-  }
+    this.setState({ clicked: !this.state.clicked });
+  };
 
   render() {
     return (
@@ -16,11 +16,11 @@ class navbar extends Component {
         <h2 className="navbar-logo">TechOpps</h2>
         <div className="menu-icon" onClick={this.handleClick}>
           <i
-            className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}
+            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
           ></i>
         </div>
 
-        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           {menuitems.map((item, index) => {
             return (
               <li key={index}>
@@ -28,12 +28,12 @@ class navbar extends Component {
                   {item.title}
                 </a>
               </li>
-            )
+            );
           })}
         </ul>
         <Button>Profile</Button>
       </nav>
-    )
+    );
   }
 }
 
