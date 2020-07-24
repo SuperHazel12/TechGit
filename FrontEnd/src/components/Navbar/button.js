@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import '../Navbar/Button.css'
 
 const STYLES = [
   'btn--primary',
@@ -11,7 +11,7 @@ const SIZES = [
   'btn--large'
 ]
 
-export const button = ({
+export const Button = ({
   children,
   type,
   onClick,
@@ -26,7 +26,7 @@ export const button = ({
   return (
     <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
       {children}
-    </button>
+      </button>
   )
 
 }
