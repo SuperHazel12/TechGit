@@ -21,7 +21,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -58,10 +58,6 @@
 .menu-icon {
   display: none;
   margin-top: -10px;
-}
-
-Button {
-  display: none;
 }
 
 @media screen and (max-width: 960px) {
