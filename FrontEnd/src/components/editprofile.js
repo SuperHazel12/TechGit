@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 import pic from "../assets/logo.png";
 import Birthday from "./birthday";
+import "../components/editprofile.css";
 
 function editprofile() {
   return (

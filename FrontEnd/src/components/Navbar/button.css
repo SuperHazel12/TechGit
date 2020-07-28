@@ -6,15 +6,13 @@
   padding: 8px 20px;
   border-radius: 4px;
   margin-right: 12px;
-  outline: red;
-  background-color: pink;
-  margin-top: -12px;
-  margin-right: 30px;
+  outline: none;
   border: none;
   cursor: pointer;
 }
 
 .btn:hover {
+  padding: 8px 20px;
   transition: all 0.2s ease-out;
   background-color: white;
   color: black;
@@ -26,8 +24,9 @@
 }
 
 .btn--outline {
-  background-color: red;
+  background-color: transparent;
   color: #fff;
+  padding: 8px 20px;
   border-radius: 4px;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;

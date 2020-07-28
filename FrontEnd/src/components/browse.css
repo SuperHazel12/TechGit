@@ -1,0 +1,130 @@
+.post {
+  background-color: #e7f9ed;
+  border-radius: 10px;
+  height: 200px;
+  width: 20%;
+  margin-left: 78%;
+  margin-top: 2%;
+}
+
+.DP {
+  margin-top: 15px;
+  margin-left: 30px;
+  width: 30%;
+  height: 30%;
+  
+}
+
+.name {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.followers {
+  color: gray;
+  margin-top: 70px;
+  margin-left: -120px;
+  font-size: 12px;
+}
+
+.following {
+  color: gray;
+  margin-top: 85px;
+  margin-left: -70px;
+  font-size: 12px;
+}
+
+.button {
+  margin-top: 12px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10%;
+  background-color: #00A037;
+  border-radius: 10px;
+  width: 85%;
+  height: 12%;
+}
+
+.textbutton {
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.profilebutton {
+  margin-top: 8px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10%;
+  background-color: #00A037;
+  border-radius: 10px;
+  width: 85%;
+  height: 12%;
+  margin-bottom: 50%;
+}
+
+@media screen and (max-width: 960px) {
+  .post {
+    align-items: center;
+    background-color: #e7f9ed;
+    border-radius: 10px;
+    height: 60px;
+    width: 95%;
+    margin-left: 16px;
+    margin-top: 2%;
+  }
+
+  .DP {
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 10%;
+    height: 10%;
+    
+  }
+  .name {
+    margin-top: 12px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 100%;
+  }
+  .followers {
+    color: gray;
+    margin-top: 30px;
+    margin-left: -82px;
+    font-size: 8px;
+  }
+  .following {
+    color: gray;
+    margin-top: 38px;
+    margin-left: -46px;
+    font-size: 8px;
+  }
+  .button {
+    margin-top: -38px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 160px;
+    background-color: #00A037;
+    border-radius: 10px;
+    width: 30%;
+    height: 40%;
+  }
+  
+  .textbutton {
+    align-items: center;
+    color: white;
+    font-weight: bold;
+  }
+  .profilebutton {
+    margin-top: -24px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 310px;
+    background-color: #00A037;
+    border-radius: 10px;
+    width: 30%;
+    height: 40%;
+    margin-bottom: 50%;
+  }
+  }
+
