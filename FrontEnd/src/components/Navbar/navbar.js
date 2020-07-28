@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { menuitems } from "./menuitems";
-import { Button } from "./button";
+import { button } from "./button";
 import "./navbar.css";
 
 class navbar extends Component {
@@ -31,7 +31,7 @@ class navbar extends Component {
             );
           })}
         </ul>
-        <Button>Profile</Button>
+        <button>Profile</button>
       </nav>
     );
   }

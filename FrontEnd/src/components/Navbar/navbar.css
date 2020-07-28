@@ -14,11 +14,6 @@
   cursor: pointer;
 }
 
-.fa-react {
-  margin: 0.5rem;
-  font-size: 1.6rem;
-}
-
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -72,6 +67,7 @@
     position: absolute;
     top: 68px;
     margin-left: 0.5px;
+    right: -100%;
     opacity: 1;
     transition: all 0.5s ease;
   }
@@ -130,7 +126,7 @@
     text-decoration: none;
   }
 
-  Button {
+  button {
     display: none;
   }
 }

@@ -20,6 +20,7 @@ class birthday extends Component {
         selected={this.state.startDate}
         onChange={this.handleChange} //only when value has changed
         isClearable
+        renderCustomInput
       />
     );
   }
