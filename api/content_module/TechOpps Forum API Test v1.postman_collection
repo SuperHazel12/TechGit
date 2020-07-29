@@ -55,7 +55,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/post/2",
+					"raw": "http://127.0.0.1:5000/api/post/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -67,7 +67,7 @@
 					"path": [
 						"api",
 						"post",
-						"2"
+						"1"
 					]
 				},
 				"description": "Retrieves a post's contents through it's id"
@@ -87,10 +87,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"body\": \"I love TechOpps\"\r\n}"
+					"raw": "{\r\n    \"post_body\": \"Edit ulit2!\",\r\n    \"availability_tag\": null\r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/post/2",
+					"raw": "http://127.0.0.1:5000/api/post/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -102,10 +102,46 @@
 					"path": [
 						"api",
 						"post",
-						"2"
+						"1"
 					]
 				},
 				"description": "Updates the body of a post"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/post/v/<id>",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_removed\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/post/v/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"v",
+						"1"
+					]
+				},
+				"description": "Updates the visibility of a post (is_removed = 0 or 1)"
 			},
 			"response": []
 		},
@@ -157,7 +193,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Second Post\",\r\n    \"body\": \"test\",\r\n    \"availability\": \"Online\"\r\n}"
+					"raw": "{\r\n    \"post_title\": \"Kevin\",\r\n    \"post_body\": \"Oh my gosh\",\r\n    \"post_url\": \"linkedin.com/in/yay\",\r\n    \"availability_tag\": \"Online\"\r\n}"
 				},
 				"url": {
 					"raw": "http://127.0.0.1:5000/api/post/submit",
