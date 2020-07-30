@@ -54,6 +54,11 @@
   margin-top: -10px;
 }
 
+.search {
+  position: absolute;
+  width: 30%;
+}
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
@@ -63,7 +68,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 480px;
+    height: 320px;
     position: absolute;
     top: 68px;
     margin-left: 0.5px;
@@ -128,5 +133,9 @@
 
   button {
     display: none;
+  }
+  .search {
+    position: absolute;
+    width: 30%;
   }
 }

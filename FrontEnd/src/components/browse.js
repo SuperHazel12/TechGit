@@ -18,7 +18,7 @@ function browse() {
           </a>
         </div>
         <div className="profilebutton">
-          <a href="#post" className="textbutton">
+          <a href="/viewprofile" className="textbutton">
             View Profile
           </a>
         </div>
