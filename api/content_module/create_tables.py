@@ -28,14 +28,16 @@ cursor.execute(create_table)
 #Creates the Comments table
 create_table = """CREATE TABLE IF NOT EXISTS comments (
     comment_id INTEGER PRIMARY KEY,
+    post_id integer NOT NULL,
     comment_upvote int DEFAULT 0,
     comment_downvote int DEFAULT 0,
     comment_body varchar(10000),
     c_edit_counter tinyint DEFAULT 0,
     is_removed bool DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME
-    removed_at DATETIME
+    updated_at DATETIME,
+    removed_at DATETIME,
+    FOREIGN KEY (post_id) REFERENCES posts (post_id)
 )"""
 cursor.execute(create_table)
 

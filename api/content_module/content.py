@@ -227,3 +227,93 @@ class PostList(Resource):
         connection.close()
 
         return {'posts': posts}
+
+class SubmitComment(Resource):
+    parser = reqparse.RequestParser()
+
+    parser.add_argument('post_id',
+    required=True,
+    help="comment should be linked to an existing post"
+    )
+
+    parser.add_argument('comment_body',
+    required=True,
+    help="comment should not be blank"
+    )
+
+    def post(self):
+        data = self.parser.parse_args()
+
+        comment = {
+            'post_id': data['post_id'],
+            'comment_body': data['comment_body']
+        }
+        
+        try:
+            if not self.find_post(data['post_id']):
+                return {"message": "The post does not exist"}, 400
+            else:
+                self.insert(comment)
+        except:
+            return {"message": "error inserting comment"}
+
+        return comment, 201
+
+    @classmethod
+    def find_post(cls, post_id):
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        query = "SELECT * FROM posts WHERE post_id=?"
+        result = cursor.execute(query, (post_id,))
+        row = result.fetchone()
+        connection.close()
+
+        if row:
+            return {'post': {'title': row[1], 'body': row[3]}}
+
+    @classmethod
+    def insert(cls, comment):
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        query = "INSERT INTO comments(post_id, comment_body) VALUES (?, ?)"
+        
+        cursor.execute(query, (comment['post_id'], comment['comment_body']))
+
+        connection.commit()
+        connection.close()
+
+class CommentsPerPost(Resource):
+    def get(self, post_id):
+        comments = self.find_postID(post_id)
+
+        if comments:
+            return comments
+            
+        return {"message": "no comments for this post"}, 400
+
+    @classmethod
+    def find_postID(cls, post_id):
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        query = "SELECT * FROM comments WHERE post_id=?"
+        result = cursor.execute(query, (post_id,))
+
+        row = result.fetchall()
+        
+        connection.close()
+        
+        comments_list = []
+        
+        if row:  
+            for res in row:  
+                comments_list.append({
+                    'Comment Upvotes': res[2], 
+                    'Comment Downvotes': res[3], 
+                    'Comment Body': res[4], 
+                    'Created at': res[7]
+                })
+
+        return comments_list

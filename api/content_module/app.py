@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import Api
 from flask_jwt import JWT
 
-from content import Post, PostList, PostSubmit, PostVis
+from content import Post, PostList, PostSubmit, PostVis, SubmitComment, CommentsPerPost
 
 # make sure to run [ pip install -r requirements.txt ]
 
@@ -17,6 +17,8 @@ api.add_resource(Post, '/api/post/<int:post_id>')
 api.add_resource(PostSubmit, '/api/post/submit')
 api.add_resource(PostList, '/api/posts')
 api.add_resource(PostVis, '/api/post/v/<int:post_id>')
+api.add_resource(SubmitComment, '/api/post/submit-comment')
+api.add_resource(CommentsPerPost, '/api/post/<int:post_id>/comments')
 
 if __name__ == "__main__":
     app.run(port=5000)
