@@ -30,7 +30,11 @@ class navbar extends Component {
             )
           })}
         </ul>
+<<<<<<< Updated upstream
         <Button>Profile</Button>
+=======
+        <button className="profile">Profile</button>
+>>>>>>> Stashed changes
       </nav>
     )
   }

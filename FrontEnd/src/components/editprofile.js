@@ -21,7 +21,11 @@ function editprofile() {
         <Row>
           <Col xs={10} md={9}>
             <span className="inline">
+<<<<<<< Updated upstream
               <img src={pic} className="pics"/>
+=======
+              <img src={pic} className="pics" />
+>>>>>>> Stashed changes
               <h1 className="space">
                 Toma Red <br /> <p className="size">@redtomades01</p>
               </h1>
@@ -36,6 +40,7 @@ function editprofile() {
               <FormControl type="firstname" className="width"></FormControl>
             </Col>
             <Col>
+<<<<<<< Updated upstream
               <FormLabel className="styke">BIRTHDAY</FormLabel>
               <InputGroup>
                 <FormControl
@@ -44,6 +49,11 @@ function editprofile() {
                   placeholder="mm/dd/yyyy"
                 ></FormControl>
               </InputGroup>
+=======
+              <FormLabel className="style">BIRTHDAY</FormLabel>
+              <br />
+              <Birthday className="width" />
+>>>>>>> Stashed changes
             </Col>
           </Row>
 
@@ -113,7 +123,12 @@ function editprofile() {
               </InputGroup>
             </Col>
           </Row>
+<<<<<<< Updated upstream
 
+=======
+          <br />
+          <br />
+>>>>>>> Stashed changes
           <Button variant="success" className="bspaces">
             SAVE CHANGES
           </Button>

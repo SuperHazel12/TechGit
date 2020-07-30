@@ -1,6 +1,7 @@
 export const MenuItems = [
   {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     title: 'Latest',
     url: '#latest',
     cName: 'nav-links',
@@ -11,6 +12,10 @@ export const MenuItems = [
 =======
     title: 'Browse',
     url: '/latest',
+>>>>>>> Stashed changes
+=======
+    title: 'Browse',
+    url: '/browse',
 >>>>>>> Stashed changes
     cName: 'nav-links',
   },
