@@ -1,0 +1,48 @@
+.pics {
+  width: 30%;
+  height: 70%;
+  margin-top: 50;
+  margin-right: 0;
+}
+
+.contain {
+  padding-left: 150;
+  padding-right: 150;
+}
+
+.inline {
+  display: flex;
+}
+
+.space {
+  margin-top: 150;
+  margin-left: 20;
+  font-weight: bold;
+  font-size: 50;
+}
+
+.size {
+  font-weight: normal;
+  font-size: 20;
+}
+
+.width {
+  width: 90%;
+}
+
+.style {
+  font-weight: bold;
+}
+
+.move {
+  margin-top: 30;
+}
+
+.bspaces {
+  margin-right: 30;
+  font-weight: bold;
+}
+
+.select  {
+  width: 30%;
+}

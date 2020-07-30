@@ -175,7 +175,7 @@ class PostVis(Resource):
             return {"message": "Post not found"}, 404
         else:
             # makes sure the values that would be accepted are only 0 or 1
-            if (data['is_removed'] is 1 or data['is_removed'] is 0):
+            if (data['is_removed'] == 1 or data['is_removed'] == 0):
                 try:
                     self.visibleToggle(toggle)
                 except:
