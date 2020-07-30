@@ -7,6 +7,7 @@ import {
   LinkedInLoginButton,
 } from "react-social-login-buttons";
 import access from "../assets/undraw_unlock_24mb.png";
+import "./login.css";
 
 function login() {
   return (
@@ -16,22 +17,40 @@ function login() {
         <Row>
           {/*to able to make a grid*/}
           <Col>
-            <img src={access} style={accesspic}/>
+            <img src={access} className="accesspic" />
           </Col>
-          <Col style={column}>
-            <h2 style={title}>LOGIN</h2>
+          <Col className="column">
+            <h2 className="title">LOGIN</h2>
             <p>Welcome back, TechOpper!</p>
             <Row>
-              <GithubLoginButton onClick={() => alert("Hello")} style={button}/>
+              <GithubLoginButton
+                onClick={() => alert("Hello")}
+                style={{
+                  borderRadius: "4px",
+                  marginLeft: "2%",
+                  width: "40%",
+                }}
+              />
             </Row>
             <Row>
               <GoogleLoginButton
                 onClick={() => alert("Hello")}
-                style={button}
+                style={{
+                  borderRadius: "4px",
+                  marginLeft: "2%",
+                  width: "40%",
+                }}
               />
             </Row>
             <Row>
-              <LinkedInLoginButton onClick={() => alert("Hello")} style={button}/>
+              <LinkedInLoginButton
+                onClick={() => alert("Hello")}
+                style={{
+                  borderRadius: "4px",
+                  marginLeft: "2%",
+                  width: "40%",
+                }}
+              />
             </Row>
           </Col>
         </Row>
@@ -41,26 +60,3 @@ function login() {
 }
 
 export default login;
-
-const accesspic = {
-  width: "100%",
-  height: "100%",
-  marginTop: 50,
-};
-
-const title = {
-  fontWeight: "bold",
-};
-
-const button = {
-  marginTop: 5,
-  marginBottom: 5,
-  width: "41%",
-  borderRadius: 8,
-  marginLeft: "2%",
-};
-
-const column = {
-  marginTop: "8%",
-};
-

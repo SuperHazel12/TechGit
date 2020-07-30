@@ -6,7 +6,7 @@ export const menuitems = [
   },
   {
     title: 'Contact',
-    url: '#contact',
+    url: '/contact',
     cName: 'nav-links',
   },
   {
