@@ -51,6 +51,7 @@ class navbar extends Component {
               border: "none",
               borderTopLeftRadius: "7px",
               borderBottomLeftRadius: "7px",
+        
             }}
             searchButtonStyles={{
               background: "#00a037",
@@ -61,7 +62,7 @@ class navbar extends Component {
             searchIconStyles={{ color: "white" }}
           />
         </div>
-        <button>Profile</button>
+        <button className="profile">Profile</button>
       </nav>
     );
   }
