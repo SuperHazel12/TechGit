@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import Api
 from flask_jwt import JWT
 
-from content import Post, PostList, PostSubmit, PostVis, SubmitComment, CommentsPerPost
+from resources.content import Post, PostList, PostSubmit, PostVis, SubmitComment, CommentsPerPost
 
 # make sure to run [ pip install -r requirements.txt ]
 
