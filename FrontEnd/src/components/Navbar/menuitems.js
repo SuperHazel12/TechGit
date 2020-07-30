@@ -1,22 +1,7 @@
-export const MenuItems = [
+export const menuitems = [
   {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    title: 'Latest',
-    url: '#latest',
-    cName: 'nav-links',
-  },
-  {
-    title: 'Browse',
-    url: '#browse',
-=======
-    title: 'Browse',
-    url: '/latest',
->>>>>>> Stashed changes
-=======
     title: 'Browse',
     url: '/browse',
->>>>>>> Stashed changes
     cName: 'nav-links',
   },
   {
@@ -24,10 +9,9 @@ export const MenuItems = [
     url: '#contact',
     cName: 'nav-links',
   },
-
   {
-    title: 'Profile',
-    url: '#profile',
-    cName: 'nav-links-mobile',
-  }
-]
+    title: "Profile",
+    url: "/viewprofile",
+    cName: "nav-links-mobile",
+  },
+];

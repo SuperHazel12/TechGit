@@ -1,5 +1,5 @@
 .NavbarItems {
-  background: #00A037;
+  background: #00a037;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -14,18 +14,13 @@
   margin-left: 30px;
 }
 
-.fa-react {
-  margin: 0.5rem;
-  font-size: 1.6rem;
-}
-
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width:  80vw;
+  width: 80vw;
   justify-content: start;
   margin-left: 12px;
   margin-top: 12px;
@@ -49,7 +44,6 @@
 
 .fa-bars {
   color: white;
-
 }
 
 .nav-links-mobile {
@@ -92,11 +86,12 @@
     position: absolute;
     top: 68px;
     margin-left: 0.5px;
+    right: -100%;
     opacity: 1;
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background: #00A037;
+    background: #00a037;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -119,7 +114,7 @@
     transform: translate(25%, 50%);
     margin-left: -10px;
   }
-  .menu-icon{
+  .menu-icon {
     display: block;
     position: absolute;
     top: 0;
@@ -131,13 +126,12 @@
   .fa-times {
     color: white;
     font-size: 2rem;
-
   }
 
   .nav-links-mobile {
     display: block;
     text-align: center;
-    padding:  1.5rem;
+    padding: 1.5rem;
     margin: 2rem auto;
     border-radius: 4px;
     color: white;
@@ -145,14 +139,17 @@
   }
 
   .nav-links-mobile:hover {
-    background-color:white;
+    background-color: white;
     color: black;
     transition: 250ms;
     text-decoration: none;
   }
 
-  Button {
+  button {
     display: none;
   }
-
+  .search {
+    position: absolute;
+    width: 30%;
+  }
 }
