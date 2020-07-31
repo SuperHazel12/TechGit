@@ -40,6 +40,10 @@ function Browse() {
 
   const [CreatePost, setCreatePost] = useState(false);
   return (
+    <div>
+      <div className="browse">
+      <h1 className="latest">Latest</h1>
+      </div>
     <div className="post">
       <div className="row">
         <img src={DP} className="DP" />
@@ -85,7 +89,7 @@ function Browse() {
 
             <div>
               <form onSubmit={formik.handleSubmit}>
-                <label className="label">Title</label>
+                <label htmlFor= "title" className="label">Title</label>
                 <input
                   type="text"
                   id="title"
@@ -94,7 +98,7 @@ function Browse() {
                   className="input"
                 />
 
-                <label className="label">Link</label>
+                <label htmlFor= "link" className="label">Link</label>
                 <input
                   type="text"
                   id="link"
@@ -103,8 +107,8 @@ function Browse() {
                   className="input"
                 />
 
-                <label className="label">Body</label>
-                <input
+                <label htmlFor= "body" className="label">Body</label>
+                <textarea
                   type="text"
                   id="body"
                   onChange={formik.handleChange}
@@ -113,14 +117,17 @@ function Browse() {
                 />
               </form>
             </div>
+            <div className="button-container">
             <button type="Submit" className='publish'>Publish</button>
             <button onClick={() => setCreatePost(false)} className='buttonclose'>Close</button>
+            </div>
           </Modal>
         </div>
       </div>
       <div>
         <button className="profilebutton">View Profile</button>
       </div>
+    </div>
     </div>
   );
 }

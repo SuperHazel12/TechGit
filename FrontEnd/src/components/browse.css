@@ -1,3 +1,8 @@
+.browse {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .post {
   background-color: #e7f9ed;
   border-radius: 10px;
@@ -129,6 +134,13 @@
   top: 0;
 }
 
+.button-container {
+  align-items: center;
+  justify-content: center;
+  margin-left: 40%;
+  margin-right: 10%;
+}
+
 .publish {
   background-color: #00a037;
   color: white;
@@ -137,7 +149,6 @@
   width: 80px;
   border-radius: 4px;
   margin-right: 5px;
-  margin-left: 543px;
 }
 
 .buttonclose {
