@@ -11,43 +11,47 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import pic from "../assets/logo.png";
-import Birthday from "./birthday";
 import "../components/editprofile.css";
 
 function editprofile() {
   return (
     <>
       {/*holding both the image and the text in a container*/}
-      <Container fluid style={contain}>
+      <Container fluid className="contain">
         <Row>
           <Col xs={10} md={9}>
-            <span style={inline}>
-              <img src={pic} style={pics} />
-              <h1 style={space}>
-                Toma Red <br /> <p style={size}>@redtomades01</p>
+            <span className="inline">
+              <img src={pic} className="pics"/>
+              <h1 className="space">
+                Toma Red <br /> <p className="size">@redtomades01</p>
               </h1>
             </span>
           </Col>
         </Row>
 
-        <Form style={move}>
+        <Form className="move">
           <Row>
             <Col xs={8} md={6}>
-              <FormLabel style={style}>FIRST NAME</FormLabel>
-              <FormControl type="firstname" style={width}></FormControl>
+              <FormLabel className="style">FIRST NAME</FormLabel>
+              <FormControl type="firstname" className="width"></FormControl>
             </Col>
             <Col>
-              <FormLabel style={style}>BIRTHDAY</FormLabel>
-              <br />
-              <Birthday style={width} />
+              <FormLabel className="styke">BIRTHDAY</FormLabel>
+              <InputGroup>
+                <FormControl
+                  type="birthday"
+                  className="width"
+                  placeholder="mm/dd/yyyy"
+                ></FormControl>
+              </InputGroup>
             </Col>
           </Row>
 
           <Row>
             <Col>
-              <FormLabel style={style}>GENDER</FormLabel>
+              <FormLabel className="style">GENDER</FormLabel>
 
-              <FormControl as="select" style={select}>
+              <FormControl as="select" className="select">
                 <option>Select</option>
                 <option disabled>------------------</option>
                 <option>Male</option>
@@ -60,7 +64,7 @@ function editprofile() {
 
           <Row>
             <Col>
-              <FormLabel style={style}>SOCIAL MEDIA</FormLabel>
+              <FormLabel className="style">SOCIAL MEDIA</FormLabel>
             </Col>
           </Row>
           <Row>
@@ -109,12 +113,10 @@ function editprofile() {
               </InputGroup>
             </Col>
           </Row>
-          <br />
-          <br />
-          <Button variant="success" style={bspaces}>
+          <Button variant="success" className="bspaces">
             SAVE CHANGES
           </Button>
-          <Button variant="success" style={bspaces}>
+          <Button variant="success" className="bspaces">
             CANCEL
           </Button>
         </Form>
@@ -124,51 +126,3 @@ function editprofile() {
 }
 
 export default editprofile;
-const pics = {
-  width: "30%",
-  height: "70%",
-  marginTop: 50,
-  marginRight: 0,
-};
-
-const contain = {
-  paddingLeft: 150,
-  paddingRight: 150,
-};
-
-const inline = {
-  display: "flex",
-};
-
-const space = {
-  marginTop: 150,
-  marginLeft: 20,
-  fontWeight: "bold",
-  fontSize: 50,
-};
-
-const size = {
-  fontWeight: "normal",
-  fontSize: 20,
-};
-
-const width = {
-  width: "90%",
-};
-
-const style = {
-  fontWeight: "bold",
-};
-
-const move = {
-  marginTop: 30,
-};
-
-const bspaces = {
-  marginRight: 30,
-  fontWeight: "bold",
-};
-
-const select = {
-  width: "30%",
-};

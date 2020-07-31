@@ -10,6 +10,7 @@ import {
   Button,
 } from "react-bootstrap";
 import messaging from "../assets/undraw_messaging_uok8.png";
+import './contact.css';
 function contact() {
   return (
     <>
@@ -18,17 +19,17 @@ function contact() {
         <Row>
           {/*to able to make a grid*/}
           <Col xs={8} md={5}>
-            <img src={messaging} style={message} />
+            <img src={messaging} className='message' />
           </Col>
           <Col xs={8} md={6}>
-            <Form style={form}>
-              <h2 style={title}>SEND US A MESSAGE</h2>
+            <Form className='form'>
+              <h2 className='title'>SEND US A MESSAGE</h2>
               <p>We love to help you, techopper!</p>
               <Row>
                 <Col>
                   {/*able to input name and message in the form*/}
                   <FormLabel className="text-muted">First Name</FormLabel>
-                  <FormControl type="first name" style={adjust}></FormControl>
+                  <FormControl type="first name" className='adjust'></FormControl>
                 </Col>
                 <Col>
                   <FormLabel className="text-muted">Last Name</FormLabel>
@@ -45,9 +46,9 @@ function contact() {
               <FormLabel className="text-muted">Message</FormLabel>
               <FormControl as="textarea" rows="4"></FormControl>
               <br />
-              <Button variant="success" type="submit">
+              <button type="submit" className="submit">
                 Submit
-              </Button>
+              </button>
             </Form>
           </Col>
         </Row>
@@ -58,20 +59,4 @@ function contact() {
 
 export default contact;
 
-const message = {
-  width: "100%",
-  height: "100%",
-  marginTop: 50,
-};
 
-const title = {
-  fontWeight: "bold",
-};
-
-const form = {
-  paddingTop: 80,
-};
-
-const adjust = {
-  paddingRight: 30,
-};

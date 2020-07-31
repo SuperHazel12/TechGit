@@ -1,7 +1,7 @@
 export const menuitems = [
   {
-    title: 'Latest',
-    url: '/latest',
+    title: 'Browse',
+    url: '/browse',
     cName: 'nav-links',
   },
   {
@@ -9,10 +9,9 @@ export const menuitems = [
     url: '/contact',
     cName: 'nav-links',
   },
-
   {
-    title: 'Profile',
-    url: '/viewprofile',
-    cName: 'nav-links-mobile',
-  }
-]
+    title: "Profile",
+    url: "/viewprofile",
+    cName: "nav-links-mobile",
+  },
+];
