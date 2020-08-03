@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "../components/browse.css";
 import DP from "../assets/DP.png";
 import { useFormik } from "formik";
+import { PostList } from "./PostList";
+import { Divider } from "semantic-ui-react";
 
 Modal.setAppElement("#root");
 
@@ -30,6 +32,18 @@ const validate = values => {
   return errors
 }
 function Browse() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/posts').then(response => 
+      response.json().then(data => {
+      setPosts(data.posts);
+      })
+    );
+  }, []);
+
+  console.log(posts);
+
   const formik = useFormik({
     initialValues,
     onSubmit,
@@ -37,12 +51,14 @@ function Browse() {
   });
 
   //console.log('Form values', formik.values)
-
   const [CreatePost, setCreatePost] = useState(false);
   return (
     <div>
       <div className="browse">
       <h1 className="latest">Latest</h1>
+        <div class="ui hidden divider">
+        <PostList posts={posts} />
+        </div>
       </div>
     <div className="post">
       <div className="row">

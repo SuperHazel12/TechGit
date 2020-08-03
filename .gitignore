@@ -31,3 +31,4 @@ instance/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+api/content_module/data.db
