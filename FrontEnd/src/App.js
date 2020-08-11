@@ -14,21 +14,21 @@ function App() {
   return (
     <div className="page-container">
       <div className="content-wrap">
-          <BrowserRouter>
-            <Navbar />
-            <Switch>
-              <Route exact path="/" component={Login} />
-              <Route path="/browse" component={Browse} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/viewprofile" component={ViewProfile} />
-              <Route path="/editprofile" component={EditProfile} />
-              <Route path="/logout" component={Logout} />
-            </Switch>
-          </BrowserRouter>
-        </div>
-        <Footer />
+        <BrowserRouter>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route path="/browse" component={Browse} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/viewprofile" component={ViewProfile} />
+            <Route path="/editprofile" component={EditProfile} />
+            <Route path="/logout" component={Logout} />
+          </Switch>
+        </BrowserRouter>
       </div>
-  )
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

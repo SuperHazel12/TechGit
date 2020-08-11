@@ -15,7 +15,7 @@
 }
 
 .space {
-  margin-top: 150;
+  margin-top: 10%;
   margin-left: 20;
   font-weight: bold;
   font-size: 50;
@@ -30,7 +30,7 @@
   width: 90%;
 }
 
-.style {
+.styles {
   font-weight: bold;
 }
 
@@ -43,6 +43,6 @@
   font-weight: bold;
 }
 
-.select  {
+.select {
   width: 30%;
 }
