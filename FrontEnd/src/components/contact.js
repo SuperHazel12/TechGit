@@ -1,16 +1,33 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Container,
-  FormControl,
-  FormLabel,
-  Form,
-  Row,
-  Col,
-  Button,
-} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { useFormik } from "formik";
 import messaging from "../assets/undraw_messaging_uok8.png";
-function contact() {
+import "./contact.css";
+function Contact() {
+  const formik = useFormik({
+    initialValues: {
+      firstname: "",
+      lastname: "",
+      emailaddress: "",
+      textarea: "",
+    },
+    onSubmit: (values) => {
+      console.log("Form data", values);
+    },
+    validate: values =>{
+      let errors ={}
+      
+      if(!values.name){
+        errors.name ='Required'
+      }
+
+      
+      return errors
+    }
+  });
+
+  //console.log("Form values", formik.values);
   return (
     <>
       {/*holding both the image and the text in a container*/}
@@ -18,37 +35,70 @@ function contact() {
         <Row>
           {/*to able to make a grid*/}
           <Col xs={8} md={5}>
-            <img src={messaging} style={message} />
+            <img src={messaging} className="message" />
           </Col>
           <Col xs={8} md={6}>
-            <Form style={form}>
-              <h2 style={title}>SEND US A MESSAGE</h2>
-              <p>We love to help you, techoppers!</p>
+            <form className="form" onSubmit={formik.handleSubmit}>
+              <h2 className="title">SEND US A MESSAGE</h2>
+              <p>We love to help you, techopper!</p>
               <Row>
                 <Col>
                   {/*able to input name and message in the form*/}
-                  <FormLabel className="text-muted">First Name</FormLabel>
-                  <FormControl type="first name" style={adjust}></FormControl>
+                  <label htmlFor="First Name" className="text-muted">
+                    First Name
+                  </label>
+                  <br />
+                  <input
+                    type="text"
+                    name="firstname"
+                    className="adjust"
+                    onChange={formik.handleChange}
+                    values={formik.values.firstname}
+                  />
                 </Col>
                 <Col>
-                  <FormLabel className="text-muted">Last Name</FormLabel>
-                  <FormControl type="last name"></FormControl>
+                  <label htmlFor="Last Name" className="text-muted">
+                    Last Name
+                  </label>
+                  <br />
+                  <input
+                    type="text"
+                    name="lastname"
+                    className="adjust"
+                    onChange={formik.handleChange}
+                    values={formik.values.lastname}
+                  />
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <FormLabel className="text-muted">Email Address</FormLabel>
-                  <FormControl type="email address"></FormControl>
+                  <label className="text-muted">Email Address</label>
+                  <br />
+                  <input
+                    type="email"
+                    name="email"
+                    className="adjust"
+                    onChange={formik.handleChange}
+                    values={formik.values.email}
+                  />
                 </Col>
                 <Col></Col>
               </Row>
-              <FormLabel className="text-muted">Message</FormLabel>
-              <FormControl as="textarea" rows="4"></FormControl>
+              <label className="text-muted">Message</label>
               <br />
-              <Button variant="success" type="submit">
+              <input
+                as="textarea"
+                name="textarea"
+                rows="4"
+                onChange={formik.handleChange}
+                values={formik.values.textarea}
+              />
+              <br />
+              <br />
+              <button type="submit" border-radius="7px">
                 Submit
-              </Button>
-            </Form>
+              </button>
+            </form>
           </Col>
         </Row>
       </Container>
@@ -56,24 +106,4 @@ function contact() {
   );
 }
 
-export default contact;
-{
-  /*for the styles*/
-}
-const message = {
-  width: "100%",
-  height: "100%",
-  marginTop: 50,
-};
-
-const title = {
-  fontWeight: "bold",
-};
-
-const form = {
-  paddingTop: 80,
-};
-
-const adjust = {
-  paddingRight: 30,
-};
+export default Contact;
